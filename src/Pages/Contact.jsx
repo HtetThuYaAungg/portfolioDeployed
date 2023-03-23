@@ -4,9 +4,9 @@ import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 
 const Contact = () => {
-  const SERVICE_ID = "service_suffzdb";
-  const TEMPLATE_ID = "template_p6zk3yr";
-  const USER_ID = "Vor4yS6zXEMxkkinC";
+  const SERVICE_ID = "";
+  const TEMPLATE_ID = "";
+  const USER_ID = "";
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
