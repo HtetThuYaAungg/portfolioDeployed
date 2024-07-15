@@ -1,0 +1,697 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  background-color: #efefef;
+  
+}
+
+#root {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  width: 100%;
+  max-width: 1280px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #333;
+  box-shadow: 0px 0px 15px gray;
+}
+
+.Header,
+.Footer {
+  width: 100%;
+
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header h1 {
+  font-size: 1.5rem;
+}
+
+.Header svg {
+  font-size: 2rem;
+}
+
+.Footer {
+  padding: 0.75rem;
+  display: grid;
+  place-content: center;
+}
+
+.Nav {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.Nav ul {
+  color: #fff;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.Nav li:hover,
+.Nav li:focus {
+  padding: 1rem;
+}
+
+.Nav li:hover,
+.Nav li:focus,
+.Nav li:hover a,
+.Nav li:focus a {
+  background-color: #eee;
+  color: #333;
+}
+
+.Nav li:hover a,
+.Nav li:focus a {
+  cursor: pointer;
+}
+
+.Home,
+.Project,
+.Contact,
+.Service,
+.Login,
+.ADDPROJECT,
+.Missing {
+  width: 100%;
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.post {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
+}
+
+.Home .post a {
+  text-decoration: none;
+}
+
+.Home .post a,
+.Home .post a:visited {
+  color: #000;
+}
+
+.post:first-child {
+  margin-top: 0;
+}
+
+.post:last-child {
+  border-bottom: none;
+}
+
+.postDate {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.postBody {
+  margin: 1rem 0;
+}
+
+.newPostForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.newPostForm label {
+  margin-top: 1rem;
+}
+
+.newPostForm input[type="text"],
+.newPostForm textarea {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+}
+
+.newPostForm textarea {
+  height: 100px;
+}
+
+.newPostForm button {
+  margin-top: 1rem;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.Missing h2,
+.PostPage h2,
+.Missing p,
+.PostPage p {
+  margin-bottom: 1rem;
+}
+
+.PostPage button {
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+}
+
+.statusMsg {
+  margin-top: 2rem;
+}
+
+.heading-primary {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 0rem 3rem 0rem 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .heading-primary {
+    font-size: 1.5rem;
+    padding: .5rem 1rem 0rem 1.8rem;
+  }
+}
+@media only screen and (width:844px), screen and (height:390px){
+  .heading-primary{
+     font-size: 1.5rem;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}
+@media only screen and (width:667px), screen and (height:375px){
+  .heading-primary{
+    font-size: 1rem;
+    padding: 0rem 1rem 0rem 2rem;
+   
+  }
+}
+@media only screen and (width:540px), screen and (height:622px){
+  .heading-primary{
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}
+@media only screen and (width:851px), screen and (height:393px){
+  .heading-primary{
+    font-size: 1rem;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}
+
+@media only screen and (width:602px), screen and (height:274px){
+  .heading-primary{
+   height : 0.5rem;
+   padding: 0rem 1rem 0rem 1rem;
+  }
+}
+@media only screen and (width:360px), screen and (height:740px){
+  .heading-primary{
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}
+
+.text-primary {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  line-height: 1.6;
+  padding: 0rem 3rem 0rem 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .text-primary {
+    font-size: 1rem;
+    padding: 0rem 0.5rem 0rem 1rem;
+  }
+}
+@media only screen and (width: 667px), screen and(height:375px) {
+  .text-primary {
+    font-size: 1rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+  }
+}
+@media only screen and (width:540px), screen and (height:622px){
+  .text-primary{
+    padding: 0rem 1rem 0rem 3rem;
+  }
+}
+@media only screen and (width:851px), screen and (height:393px){
+  .text-primary{
+    font-size: 1rem;
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}
+
+
+.home-hero {
+  color: #fff;
+  height: 29.3rem;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    rgba(6, 7, 7, 0.8),
+    rgb(6, 40, 20)
+  ),
+  url(./assets/common-bg.svg);
+background-position: center;
+
+}
+
+@media only screen and (width:912px), screen and (height:1368px){
+  .home-hero{
+    height: 90vh;
+  }
+}
+@media only screen and (max-width:500px){
+  .home-hero{
+    height: 84vh;
+  }
+}
+@media only screen and (width:414px), screen and (height:896px){
+  .home-hero{
+    height: 83vh;
+  }
+}
+@media only screen and (width:540px), screen and (height:720px){
+  .home-hero{
+    height: 79.5vh;
+  }
+}
+@media only screen and (width:768px), screen and (height:1024px){
+  .home-hero{
+    height: 85.5vh;
+  }
+}
+@media only screen and (width:1024px), screen and (height:768px){
+  .home-hero{
+    height: 80.5vh;
+  }
+}
+/* iphone 12 pro */
+@media only screen and (width:390px), screen and (height:844px){
+  .home-hero{
+    height: 82vh;
+  }
+}
+@media only screen and (width:844px), screen and (height:390px){
+  .home-hero{
+    height: 94vh;
+  }
+}
+/* iphone SE */
+@media only screen and (width:667px), screen and (height:375px){
+  .home-hero .home-hero__cta1{
+   height: 90vh;
+  }
+}
+/* iphonexr */
+@media only screen and (width:896px), screen and (height:414px){
+  .home-hero{
+    height: 81vh;
+  }
+}
+/* pixel5 */
+@media only screen and (width:393px), screen and (height:851px){
+  .home-hero{
+    height: 80vh;
+  }
+}
+@media only screen and (width:360px), screen and (height:740px){
+  .home-hero{
+    height: 80vh;
+  }
+}
+/* @media only screen and (width:602px),screen and(height:275px){
+  .home-hero{
+    height:100vh;
+  }
+} */
+@media only screen and (width:851px), screen and (height:393px){
+  .home-hero{
+    height: 100vh;
+  }
+}
+/* surface pro7 */
+@media only screen and (width:912px), screen and (height:1386px){
+  .home-hero{
+    height: 89vh;
+  }
+}
+@media only screen and (width:1386px), screen and (height:912px){
+  .home-hero{
+    height: 84.1vh;
+  }
+}
+
+/* surface duo */
+
+@media only screen and (width:720px), screen and (height:540px){
+  .home-hero{
+    height: 73vh;
+  }
+}
+@media only screen and (width:720px), screen and (height:1114px){
+  .home-hero{
+    height: 86.5vh;
+  }
+}
+@media only screen and (width:1114px), screen and (height:720px){
+  .home-hero{
+    height: 80vh;
+  }
+}
+
+/* ipadair */
+@media only screen and (width:820px), screen and (height:1180px){
+  .home-hero{
+    height: 87vh;
+  }
+}
+@media only screen and (width:1180px), screen and (height:820px){
+  .home-hero{
+    height: 82vh;
+  }
+}
+@media only screen and (width:653px), screen and (height:280px){
+  .home-hero{
+    height: 100vh;
+  }
+}
+@media only screen and (width:740px), screen and (height:360px){
+  .home-hero{
+    height: 100vh;
+  }
+}
+@media only screen and (width:540px), screen and (height:622px){
+  .home-hero{
+    height:90vh;
+  }
+}
+
+
+
+.home-hero__socials {
+  position: absolute;
+  top: 50%;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 500px){
+  .home-hero__socials{
+    position: absolute;
+    top: 78%;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    border-left: 2px solid #eee;
+    display: flex;
+    left: 2.6rem;
+  }
+}
+@media only screen and (width:540px), screen and (height:720px){
+  .home-hero__socials{
+   top:50px;
+  }
+}
+@media only screen and (width:915px), screen and (height:412px){
+  .home-hero__socials{
+   top : 52%;
+  }
+}
+@media only screen and (width:653px), screen and (height:280px){
+  .home-hero__socials{
+   top : 52%;
+  }
+}
+@media only screen and (width:512px), screen and (height:717px){
+  .home-hero__socials{
+   top : 90%;
+left: 5.8rem;
+  }
+}
+
+/* iphonese */
+@media only screen and (width:667px), screen and (height:375px){
+  .home-hero__socials{
+   top : 50%;
+  }
+}
+/* iphonexr */
+@media only screen and (width:896px), screen and (height:414px){
+  .home-hero__socials{
+   top : 50%;
+ 
+  }
+}
+@media only screen and (width:851px), screen and (height:393px){
+  .home-hero__socials{
+   top : 55%;
+  }
+}
+@media only screen and (width:602px), screen and (height:274px){
+  .home-hero__socials{
+   top : 55%;
+  }
+}
+@media only screen and (width:540px), screen and (height:720px){
+  .home-hero__socials{
+   top:50%;
+  }
+}
+@media only screen and (width:1114px), screen and (height:720px){
+  .home-hero__socials{
+   top : 50%;
+   left: 0rem;
+  }
+}
+@media only screen and (width:360px), screen and (height:740px){
+  .home-hero__socials{
+    top: 92%;  
+    left: 1.3rem;
+  }
+}
+
+.home-hero__social {
+  width: 2.5rem;
+}
+@media only screen and (max-width: 678px) {
+  .home-hero__social{
+    width: 3.5rem;
+  }
+}
+.home-hero__social-icon-link {
+  width: 100%;
+  display: block;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s;
+}
+@media only screen and (max-width: 37.5rem) {
+  .home-hero__social-icon-link{
+   width: 100%;
+  display: block;
+  padding: 0.5rem;
+  border-right: 1px solid #eee;
+  transition: background 0.3s;
+
+  }
+}
+.home-hero__social-icon-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.home-hero__social-icon-link--bd-none {
+  border-bottom: 20;
+}
+.home-hero__social-icon {
+  width: 100%;
+}
+
+.home-hero__content {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90rem;
+  width: 92%;
+ 
+}
+
+@media only screen and (max-width: 680px) {
+  .home-hero__content {
+    padding: 4rem 0 0 0;
+    margin: auto;
+    position: static;
+    transform: translate(0, 0);
+  }
+}
+
+.home-hero__info {
+  margin: 3rem auto 0 auto;
+  max-width: 80rem;
+}
+.home-hero__cta {
+  margin-top: 5rem;
+  text-align: center;
+}
+.home-hero__cta1 {
+  padding-top: 29rem;
+  text-align: center;
+}
+@media only screen and (min-width: 640px) {
+  .home-hero__cta1{
+  padding-top: 13rem;
+  text-align: center;
+}}
+@media only screen and (min-width: 768px) {
+  .home-hero__cta1{
+  padding-top: 13rem;
+  text-align: center;
+}}
+@media only screen and (min-width: 1024px) {
+  .home-hero__cta1{
+  padding-top: 14rem;
+  text-align: center;
+}}
+
+
+.btn {
+  background: #fff;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+.btn:hover {
+  color: white;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    rgb(15, 29, 21)
+  ),
+  url(./assets/common-bg.svg);
+  transform: translateY(-3px);
+}
+.btn--bg {
+  padding: 0.5rem 6rem 2rem;
+  font-size: 2rem;
+}
+.btn--med {
+  padding: 1.5rem 5rem;
+  font-size: 1.6rem;
+}
+.btn--theme {
+  background: #0062b9;
+  color: #fff;
+}
+.btn--theme-inv {
+  color: #0062b9;
+  background: #fff;
+  border: 2px solid #0062b9;
+  box-shadow: none;
+  padding: calc(1.5rem - 2px) calc(rem - 2px);
+}
+
+@media only screen and (max-width: 600px) {
+  .btn {
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.about-hero {
+  color: #fff;
+  height: auto;
+  width: 100%;
+  min-height:auto;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    rgba(6, 7, 7, 0.8),
+    rgb(6, 40, 20)
+  ),
+  url(./assets/common-bg.svg);
+background-position: center;
+
+}
+/* From https://css.glass */
+.glass{
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.contact_1 {
+  background: linear-gradient(
+    to right,
+    rgba(6, 7, 7, 0.8),
+    rgb(6, 40, 20)
+  ),
+  url(./assets/common-bg.svg);
+}
+
+.form {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+
+.swal2-title {
+  font-size:xx-small;
+}
